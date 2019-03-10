@@ -21,6 +21,7 @@ const { githubToken, githubSecret, webhookUrl, owner } = process.env;
 const help = 'possible commands: list, setup, add, remove, enable, disable';
 const missingRepoHelp = 'please specify a repo.';
 
+const storeRaw = fs.readFileSync(storePath);
 const store = JSON.parse(storeRaw);
 
 /*-------------------------
