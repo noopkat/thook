@@ -6,8 +6,8 @@ const os = require('os');
 const mkdirp = require('mkdirp');
 
 const configDirPath = path.join(os.homedir(), '.talerts');
-const configPath = path.join(configPath, '.env');
-const reposPath = path.join(configPath, 'repos.json');
+const configPath = path.join(configDirPath, '.env');
+const reposPath = path.join(configDirPath, 'repos.json');
 
 mkdirp(configDirPath, (error) => {
   if (error) return console.error('could not finish installing talerts:', error);
